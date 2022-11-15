@@ -60,11 +60,11 @@ void genereaza_cuv()///functie de generat un cuvant random
 void joc()///functia de jucat ca persoana
 {
 pls[""]++;  ///aici tre sa vad daca bag mapa de cuvinte folosite la WHILE
-  /*cout<<"Toate literele din cuvant trebuie sa fie MARI!!!\n";
+  cout<<"Toate literele din cuvant trebuie sa fie MARI!!!\n";
     cout<<"Cuvantul contine exact 5 litere!!!\n";
     cout<<"G - Litera nu exista in cuvant\n";
     cout<<"C - Litera este plasata corect in cuvant\n";
-    cout<<"A - Litera exista in cuvant, dar nu pe aceea pozitie\n";*/
+    cout<<"A - Litera exista in cuvant, dar nu pe aceea pozitie\n";
     char incerc[6];
     int pasi=0;
     char ant[6];
@@ -73,8 +73,9 @@ pls[""]++;  ///aici tre sa vad daca bag mapa de cuvinte folosite la WHILE
     {
         char afisaj[6];
         
-        //cout<<"Incearca cuvant:";
+        cout<<"Incearca cuvant:";
         int ebun=0;
+        //cin>>incerc (daca doresc sa joace omul trebuie inlocuita linia cu urmatoare cu aceasta)(adica,  strcpy(ant,incerc);  ->  cin>>incerc;    )
         strcpy(ant,incerc);
         while(ebun==0){
        
@@ -95,9 +96,10 @@ pls[""]++;  ///aici tre sa vad daca bag mapa de cuvinte folosite la WHILE
         }
         if(!ebun)
         {
-            //cout<<"Cuvantul scris este invalid, mai incercati\n";
+            cout<<"Cuvantul scris este invalid, mai incercati\n";
         }
         }
+        cout<<'\n';
 ///sa fac cazul cand o litera apare de mai multe ori???
         for(int i=0; i<=4; ++i)
         {
