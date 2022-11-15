@@ -1,6 +1,6 @@
 # Echipa
-Voinescu David-Ioan
-Milosi Elias
+Voinescu David-Ioan,
+Milosi Elias,
 Huminic Angel
 
 
