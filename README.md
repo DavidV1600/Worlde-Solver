@@ -11,5 +11,5 @@ Algoritmul de gasire a cuvantului potrivit se bazeaza pe teoria informatiei, fol
 Algoritmul are o medie de 4.35 (4.34922) incercari pana a gasi raspunsul corect si incepe sa ghiceasca cu cuvantul LUTRE
 
 # Referinte
-https://youtu.be/v68zYyaEmEA
+https://youtu.be/v68zYyaEmEA,  
 https://youtu.be/fRed0Xmc2Wg
