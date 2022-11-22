@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <bits/stdc++.h>
+#include <stdio.h>
 #include <fstream>
 #include <cstring>
 #include <map>
@@ -31,7 +32,6 @@ unordered_map<char,int>folosit;
 double mediaJOC=0;
 int pasi=0;
 int nr=0;
-
 
 
 double aentropie(double aposibilitate)///functie de calculat entropia pentru posibilitate
@@ -201,6 +201,7 @@ int main()
     ggout.close();
     ggout.open("ceva2.txt", std::ios_base::out);///scot trunc daca nu mere si citesc toate liniile    ggout<<acuvant_entropic<<'\n';
     ggout.close();
+
 int pas=0;
     abag();
 pl[""]++;
@@ -228,7 +229,5 @@ pl[""]++;
     }
     cout<<"L-ai ghicit din "<<pas<<" incercari!!!";
 ///face 2 pasi si nu mai mere tre sa vad cu citirea aia belita
-
     return 0;
 }
-
