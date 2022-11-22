@@ -1,6 +1,7 @@
 #include <iostream>
 #include <time.h>
 #include <bits/stdc++.h>
+#include <stdio.h>
 #include <fstream>
 #include <cstring>
 
@@ -26,6 +27,9 @@ double pos_lit[30][6];///posibilitatea [litera]/[pozitie]
 char copie_cuv[12000][6];
 char ant[6];
 unordered_map<string,int>pls;///mapa de cuvinte folosite
+int mod=0;/// mod=0 cand joaca cu botul si mod=1 cand joaca jucatorul
+char la_misto[6];
+
 
 double entropie(double posibilitate)///functie de calculat entropia pentru posibilitate
 {
@@ -75,7 +79,9 @@ pls[""]++;  ///aici tre sa vad daca bag mapa de cuvinte folosite la WHILE
         
         cout<<"Incearca cuvant:";
         int ebun=0;
-        //cin>>incerc (daca doresc sa joace omul trebuie inlocuita linia cu urmatoare cu aceasta)(adica,  strcpy(ant,incerc);  ->  cin>>incerc;    )
+        if(mod==0)
+        cin>>incerc; //(daca doresc sa joace omul trebuie inlocuita linia cu urmatoare cu aceasta)(adica,  strcpy(ant,incerc);  ->  cin>>incerc;    )
+        else
         strcpy(ant,incerc);
         while(ebun==0){
        
@@ -139,6 +145,11 @@ void posib()
 ///DE FACUT CAND E CCACC SAU CAZURI CU A CAND DEJA EXISTA LITERA!!!
 int main()
 {
+        gin.open("ceva.txt", std::ios_base::in); ///citesc fisierul initial iar daca are cuvantul LUTRE in el, inseamna ca a fost deschis deja AI -> urmeaza sa joace cu botul
+        gin>>la_misto;
+        gin.close();
+        if(strcmp(la_misto,"LUTRE")==0)
+        mod=1;
     //srand(clock());
 
     srand(time(NULL));
@@ -147,8 +158,10 @@ int main()
 
 //test();
     genereaza_cuv();
+    if(strcmp(solutie,"LUTRE")==0)
+    mod=0;
+    
     joc();
 ///face doi pasi si nu mai mere tre sa vad cu citirea aia belita
     return 0;
 }
-
