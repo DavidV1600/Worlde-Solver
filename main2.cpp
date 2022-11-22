@@ -79,16 +79,18 @@ pls[""]++;  ///aici tre sa vad daca bag mapa de cuvinte folosite la WHILE
         
         cout<<"Incearca cuvant:";
         int ebun=0;
-        if(mod==0)
-        cin>>incerc; //(daca doresc sa joace omul trebuie inlocuita linia cu urmatoare cu aceasta)(adica,  strcpy(ant,incerc);  ->  cin>>incerc;    )
-        else
+//(daca doresc sa joace omul trebuie inlocuita linia cu urmatoare cu aceasta)(adica,  strcpy(ant,incerc);  ->  cin>>incerc;    )
+        if(mod==1)
         strcpy(ant,incerc);
         while(ebun==0){
-       
+       if(mod==0)
+       cin>>incerc;
+       if(mod==1){
         while(strcmp(ant,incerc)==0){
         gin.open("ceva.txt", std::ios_base::in); 
         gin>>incerc;
         gin.close();
+    }
     }
     
     pls[incerc]++;
@@ -102,7 +104,8 @@ pls[""]++;  ///aici tre sa vad daca bag mapa de cuvinte folosite la WHILE
         }
         if(!ebun)
         {
-            cout<<"Cuvantul scris este invalid, mai incercati\n";
+            cout<<'\n'<<"Cuvantul scris este invalid, mai incercati\n";
+            cout<<"Incearca cuvant:";
         }
         }
         cout<<'\n';
