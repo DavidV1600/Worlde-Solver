@@ -1,20 +1,14 @@
-# Echipa
-Voinescu David-Ioan,
-Milosi Elias,
-Huminic Angel
+#Description of the Project:
+The word-finding algorithm is based on information theory, using Shannon's entropy. It calculates, for each letter in the alphabet, its probability of appearing in any position (1, 2, 3, 4, 5) in the remaining possible words. By analyzing all the words, it chooses the one that provides the most information. The algorithm uses the "easy mode" version, where it can use words even if they are no longer a possible correct answer. This version is better because there are situations where a word that cannot be the solution provides more information than any of the remaining possibilities to be the solution.
 
+#Average solving time
+The algorithm has an average of 4.35 (4.34922) attempts until it finds the correct answer, and it starts guessing with the word "LUTRE."
 
-# Descriere Proiect
-Algoritmul de gasire a cuvantului potrivit se bazeaza pe teoria informatiei, folosind Entropia lui Shannon. Acesta calculeaza pentru fiecare litera din alfabet probabilitatea ei de a aparea pe orice pozitie (1,2,3,4,5) in cuvintele ramase posibile, iar analizand toate cuvintele, il alege pe cel care ofera cea mai multa informatie. Algoritmul foloseste varianta (easy mode), in care el poate folosi cuvinte chiar daca acestea nu mai au posibilitatea de a fi raspunsul corect, aceasta varianta fiind mai buna deoarece exista situatii in care un cuvant care nu poate fi solutia ofera mai multa informatie, decat oricare din cele ramase ca posibilitati de a fi solutia.
+#Project Startup
+To run the mode where the game solves itself, two consoles/terminals need to be opened simultaneously. In the first one, run the command "./AI," and then in the other one, run "./JOC."
+To run only the game where the user inputs words, run only the command "./JOC."
+If it doesn't work, try running "g++ main.cpp -o AI" and "g++ main2.cpp -o JOC" first, and then the two commands.
 
-# Media de rezolvare
-Algoritmul are o medie de 4.35 (4.34922) incercari pana a gasi raspunsul corect si incepe sa ghiceasca cu cuvantul LUTRE.
-
-# Pornire proiect
-Pentru a rula modul in care jocul se rezolva singur trebuie deschise 2 console/terminale simultan, in primul vom rula comanda "./AI", iar apoi in celalalt vom rula "./JOC".
-Pentru a rula doar jocul, unde utilizatorul introduce cuvinte trebuie rulata doar comanda "./JOC".
-Daca nu functioneaza trebuie rulate "g++ main.cpp -o AI" si "g++ main2.cpp -o JOC", iar apoi cele doi comenzi.
-
-# Referinte
+# References
 https://youtu.be/v68zYyaEmEA,  
 https://youtu.be/fRed0Xmc2Wg
